@@ -20,7 +20,7 @@ function renderData(data) {
     data.forEach(coin => {
         const row = document.createElement('tr');
         const priceChangeClass = coin.price_change_percentage_24h > 0 ? 'positive-change' : 'negative-change';
-        row.innerHTML = `
+        row.innerHTML = ` 
             <td>
                 <img src="${coin.image}" alt="${coin.name}" width="30" height="30" style="vertical-align: middle">
                 <span style="margin-left: 10px">${coin.name}</span>

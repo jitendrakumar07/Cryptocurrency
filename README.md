@@ -1,83 +1,89 @@
 # Cryptocurrency Tracker
 
-A simple web application that allows users to track and sort cryptocurrency data in real-time.
+A real-time cryptocurrency tracking application that displays market data for top cryptocurrencies.
+
+🔗 **Live Demo:** [Cryptocurrency Tracker](https://cryptocurrencies-eight.vercel.app/)
 
 ## Features
 
-- Real-time cryptocurrency data display
+- Real-time cryptocurrency data from CoinGecko API
 - Search functionality by cryptocurrency name or symbol
 - Sort cryptocurrencies by:
   - Market Cap
-  - Percentage Change
-- Responsive design for all devices
+  - Percentage Change (24h)
+- Display key metrics:
+  - Current Price
+  - 24h Price Change
+  - Market Cap
+  - Trading Volume
+- Visual indicators for price changes (green/red)
+- Cryptocurrency icons
+- Responsive design
 
 ## Tech Stack
 
 - HTML5
 - CSS3
 - JavaScript (Vanilla)
+- CoinGecko API
 
-## Project Structure
+## API Integration
 
+The application uses the CoinGecko API v3 endpoint:
+```https:%2F%2Fapi.coingecko.com%2Fapi%2Fv3%2Fcoins%2Fmarkets%60%60%60
 
-## Setup Instructions
+Data refreshes on page load and includes:
+- Top 10 cryptocurrencies by market cap
+- USD currency pairing
+- 24-hour price change data
 
-1. Clone or download this repository
-2. Open `index.html` in your web browser
-3. No additional setup required as this is a static website
+## Key Functions
 
-## How to Use
+1. **Data Fetching**
+   - Fetches real-time data from CoinGecko API
+   - Error handling for API requests
 
-1. **View Cryptocurrencies**
-   - The main table displays cryptocurrency information
-   - Each row shows details like name, symbol, market cap, and price changes
+2. **Search Functionality**
+   - Case-insensitive search
+   - Filters by both name and symbol
+   - Real-time filtering as you type
 
-2. **Search Function**
-   - Use the search bar at the top to filter cryptocurrencies
-   - Search works with both cryptocurrency names and symbols
+3. **Sorting Features**
+   - Market Cap sorting (highest to lowest)
+   - 24h Price Change sorting (highest to lowest)
 
-3. **Sorting**
-   - Click "Sort By Mkt Cap" to sort by market capitalization
-   - Click "Sort by percentage" to sort by percentage change
+## Local Development
 
-## Implementation Details
+1. Clone the repository
+2. Open `index.html` in your browser
+3. No build process required
 
-### HTML Structure
-- Responsive container layout
-- Search input field
-- Sorting buttons
-- Dynamic table for cryptocurrency data
+## Deployment
 
-### CSS Features
-- Responsive design
-- Modern UI elements
-- Clean and intuitive interface
+This project is deployed on Vercel. To deploy your own version:
 
-### JavaScript Functionality
-- Dynamic data loading
-- Real-time search filtering
-- Sorting algorithms for market cap and percentage change
-- Table manipulation and updates
+1. Fork this repository
+2. Create a Vercel account
+3. Connect your repository to Vercel
+4. Deploy
 
-## Browser Compatibility
+## Future Enhancements
 
-- Chrome (recommended)
-- Firefox
-- Safari
-- Edge
-
-## Future Improvements
-
-- Add more sorting options
-- Implement price alerts
-- Add cryptocurrency comparison feature
-- Include historical data charts
-- Add dark/light theme toggle
+- Add more cryptocurrencies to the list
+- Implement real-time price updates
+- Add historical price charts
+- Include additional sorting options
+- Add portfolio tracking features
 
 ## Contributing
 
-Feel free to fork this project and submit pull requests for any improvements.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
 This project is open source and available under the MIT License.
+
+## Acknowledgments
+
+- Data provided by [CoinGecko API](https://www.coingecko.com/en/api)
+- Deployed with [Vercel](https://vercel.com)
